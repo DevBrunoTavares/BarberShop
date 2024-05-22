@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="primaria">#383443</color>
+    <color name="nomes">#2C3E50</color>
+    <color name="alizarin">#E74C3C</color>
+
 </resources>
