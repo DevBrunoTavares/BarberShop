@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.barbershop"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.barbershop"
@@ -32,6 +32,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    viewBinding{
+        enable = true
     }
 }
 
