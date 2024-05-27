@@ -3,6 +3,8 @@ package com.example.barbershop
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
+import com.example.barbershop.R.id.tv_usuario
 import com.example.barbershop.databinding.ActivityMainBinding
 import com.example.barbershop.view.Home
 import com.google.android.material.snackbar.Snackbar
@@ -19,10 +21,10 @@ class MainActivity : AppCompatActivity() {
         val edtNome = binding.edtNome
 
         binding.btnAgendar.setOnClickListener {
-            val agendar = binding.edtNome.text.toString()
+            val nome = binding.edtNome.text.toString()
 
 
-            if (agendar == "") {
+            if (nome == "") {
                 // mostrar  mensagem para o usuario
 
                 Snackbar.make(
@@ -31,14 +33,14 @@ class MainActivity : AppCompatActivity() {
                 )
                     .show()
             } else {
-                navegarPraHome(agendar)
+                navegarPraHome(nome)
             }
         }
     }
 
-    private fun navegarPraHome(agendar: String) {
-        val intent = Intent(this, Home::class.java)
-        intent.putExtra("Agendar", agendar)
+    private fun navegarPraHome(nome: String) {
+        val intent = Intent(this,Home::class.java)
+        intent.putExtra("nome", nome)
         startActivity(intent)
     }
 }
